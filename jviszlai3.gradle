@@ -1,0 +1,22 @@
+apply plugin: 'java'
+
+apply plugin: 'application'
+
+mainClassName = 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+
+jar {
+    manifest {
+        attributes  'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+
+    }
+    destinationDir = file("build/libs")
+    archiveName = 'AntLabMain.jar'
+    from (zipTree('lib/resources.jar')) {
+        include '*.class'
+    }
+}
+
+dependencies {
+    compile files('lib/resources.jar')
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
