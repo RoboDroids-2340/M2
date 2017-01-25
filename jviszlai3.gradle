@@ -12,7 +12,7 @@ jar {
     destinationDir = file("build/libs")
     archiveName = 'AntLabMain.jar'
     from (zipTree('lib/resources.jar')) {
-        include '*.class'
+        include '**/*.class'
     }
 }
 
