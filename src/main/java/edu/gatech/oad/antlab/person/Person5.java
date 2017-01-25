@@ -47,9 +47,4 @@ public class Person5 {
     public static String toString(String input) {
         return name + calc(input);
     }
-
-    public static void main(String[] args) {
-        System.out.println(calc("Sarah"));
-    }
-
 }
