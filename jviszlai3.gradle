@@ -6,7 +6,7 @@ mainClassName = 'edu.gatech.oad.antlab.pkg1.AntLabMain'
 
 jar {
     manifest {
-        attributes  'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+        attributes  'Main-Class' : mainClassName,
 
     }
     destinationDir = file("build/libs")
@@ -18,5 +18,4 @@ jar {
 
 dependencies {
     compile files('lib/resources.jar')
-    testCompile group: 'junit', name: 'junit', version: '4.+'
 }
