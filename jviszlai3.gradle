@@ -6,7 +6,7 @@ mainClassName = 'edu.gatech.oad.antlab.pkg1.AntLabMain'
 
 jar {
     manifest {
-        attributes  'Main-Class' : mainClassName,
+        attributes  'Main-Class' : mainClassName
 
     }
     destinationDir = file("build/libs")
