@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+mainClassName='edu.gatech.oad.antlab.pkg1.AntLabMain'
+
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+jar  {
+  manifest {
+     attributes  'Implementation-Title' : 'Gradle Quickstart' ,
+                 'Implementation-Version' : version,
+                 'Main-Class' : mainClassName
+    }
+
+    destinationDir = file("build/libs")
+    archiveName = 'AntLabMain.jar'
+    from (zipTree('lib/resources.jar')) {
+        include '**/*.class'
+    }
+}
